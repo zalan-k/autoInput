@@ -1,0 +1,11 @@
+@echo off
+start “” “[location: requestInput.exe]” "requests.txt" "outputs.txt"
+
+:waitloop
+timeout /t 2 /nobreak >nul
+tasklist | find /i "requestUserInput.exe" >nul
+if errorlevel 1 (
+    start \min "" “[location: autoInput.exe]” "commands.txt"
+) else (
+    goto waitloop
+)

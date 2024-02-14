@@ -1,0 +1,3 @@
+PAUSEFOR 5
+TYPE <C:/Programs/test.txt 1><C:/Programs/test.txt 2>
+
